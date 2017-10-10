@@ -1,6 +1,3 @@
-import getpass
-import os
-import socket
 try:
 	import requests
 	import psutil
@@ -22,9 +19,15 @@ except ImportError:
 
 import requests
 import psutil
+import getpass
+import os
+import socket
 url = 'https://apps.arachnis.org/pt-project/'
 for i in range(0,2):
-	data = str(getpass.getuser()) + '@' + str(socket.gethostname()) + ' (' + str(os.name) + ') is running at ' + str(psutil.cpu_percent(interval=1)) + '% CPU right now'
+	publicip = requests.get('http://ip.42.pl/raw').text
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	s.connect(("8.8.8.8", 80))
+	data = str(getpass.getuser()) + '@' + str(socket.gethostname()) + ' (' + str(os.name) + ') is running at ' + str(psutil.cpu_percent(interval=1)) + '% CPU right now [' + str(publicip) + ']' + '[' + str(s.getsockname()[0]) + ']'
 	payload = {'Name': data}
 	r = requests.post(url, data=payload)
 	print(data)
