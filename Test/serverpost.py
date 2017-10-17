@@ -23,7 +23,7 @@ import getpass
 import os
 import socket
 url = 'https://apps.arachnis.org/pt-project/'
-for i in range(0,2):
+for i in range(0,10):
 	publicip = requests.get('http://ip.42.pl/raw').text
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	s.connect(("8.8.8.8", 80))
