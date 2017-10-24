@@ -1,6 +1,6 @@
 # Programming Tools Project
 
-In this project, we'll be making a realtime system monitoring tool, which can spy on a system anonymously and send us the system's data and actions over the internet. This project will be primarily implemented in **C/C++** and **Python3**. We'll use tools like **make**  and **PyBuilder** for build automation.
+In this project, we'll be making a realtime system monitoring tool, which can spy on a system anonymously and send to the tracker, the system's data and actions over the internet. This project will be primarily implemented in **C/C++** and **Python3**. We'll use tools like **make**  and **PyBuilder** for build automation.
 
 
 
